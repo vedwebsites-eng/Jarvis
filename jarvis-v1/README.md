@@ -2,9 +2,17 @@
 
 A local-first personal assistant prototype inspired by Jarvis.
 
-## Run
+## Run Directly
 
 Open `index.html` in a browser.
+
+For the recommended project-level run command, use:
+
+```powershell
+npm start
+```
+
+Then open `http://localhost:3000`.
 
 The prototype uses browser features only:
 - `localStorage` for memory, tasks, reminders, and recent chat

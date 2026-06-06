@@ -1,0 +1,17 @@
+{
+  "name": "jarvis",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A local-first personal assistant prototype inspired by Jarvis.",
+  "scripts": {
+    "start": "node scripts/serve-static.mjs",
+    "check": "node --check jarvis-v1/app.js"
+  },
+  "keywords": [
+    "assistant",
+    "jarvis",
+    "automation",
+    "voice"
+  ],
+  "license": "MIT"
+}
