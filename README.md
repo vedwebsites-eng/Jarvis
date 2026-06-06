@@ -31,6 +31,17 @@ http://localhost:3000
 
 You can also open `jarvis-v1/index.html` directly, but the local server route is better as the project grows.
 
+## Deploy
+
+For an own-server setup, this repo includes a `Dockerfile`, `docker-compose.yml`, and domain setup notes.
+
+Read [DEPLOYMENT.md](./DEPLOYMENT.md) for:
+
+- Running Jarvis on a VPS
+- Mapping a custom domain
+- Putting HTTPS in front of the app with Caddy
+- Serving the app on a different port
+
 ## Try
 
 ```text

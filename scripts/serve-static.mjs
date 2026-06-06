@@ -4,6 +4,7 @@ import { extname, join, normalize, resolve } from "node:path";
 
 const root = resolve("jarvis-v1");
 const port = Number(process.env.PORT || 3000);
+const host = process.env.HOST || "127.0.0.1";
 
 const types = {
   ".html": "text/html; charset=utf-8",
@@ -34,6 +35,7 @@ const server = createServer((request, response) => {
   createReadStream(filePath).pipe(response);
 });
 
-server.listen(port, () => {
-  console.log(`Jarvis v1 is running at http://localhost:${port}`);
+server.listen(port, host, () => {
+  const displayHost = host === "0.0.0.0" ? "localhost" : host;
+  console.log(`Jarvis v1 is running at http://${displayHost}:${port}`);
 });
