@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jarvis v1</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <aside class="sidebar" aria-label="Assistant status">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span>
+          </div>
+          <div>
+            <p class="eyeline">Local assistant</p>
+            <h1>Jarvis v1</h1>
+          </div>
+        </div>
+
+        <section class="system-card" aria-label="System status">
+          <div class="pulse-orbit" aria-hidden="true">
+            <div class="core"></div>
+          </div>
+          <p class="status-label">System state</p>
+          <strong id="systemState">Studying with you</strong>
+          <span id="clock">--:--</span>
+        </section>
+
+        <nav class="quick-actions" aria-label="Quick commands">
+          <button class="ghost-button" data-command="Plan my next 45 minutes of math study">
+            Plan study
+          </button>
+          <button class="ghost-button" data-command="What can you remember?">Recall memory</button>
+          <button class="ghost-button" data-command="Start a 25 minute focus session">
+            Focus timer
+          </button>
+          <button class="ghost-button" data-command="Show command help">Command help</button>
+        </nav>
+      </aside>
+
+      <section class="workspace" aria-label="Jarvis workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyeline">Personal operations console</p>
+            <h2>Ask, remember, remind, and focus.</h2>
+          </div>
+          <div class="topbar-actions">
+            <button id="voiceButton" class="icon-button" type="button" title="Start voice input">
+              <span class="icon-mic" aria-hidden="true"></span>
+              <span class="sr-only">Start voice input</span>
+            </button>
+            <button id="speakToggle" class="toggle-button" type="button" aria-pressed="true">
+              Voice on
+            </button>
+          </div>
+        </header>
+
+        <div class="grid">
+          <section class="assistant-panel" aria-label="Conversation">
+            <div id="messages" class="messages" aria-live="polite"></div>
+            <form id="commandForm" class="command-form">
+              <input
+                id="commandInput"
+                type="text"
+                autocomplete="off"
+                placeholder="Try: remember that I study math at night"
+                aria-label="Command"
+              />
+              <button type="submit">Send</button>
+            </form>
+          </section>
+
+          <aside class="right-rail" aria-label="Assistant memory and reminders">
+            <section class="panel compact">
+              <div class="panel-heading">
+                <h3>Memory</h3>
+                <button id="clearMemory" type="button">Clear</button>
+              </div>
+              <ul id="memoryList" class="list"></ul>
+            </section>
+
+            <section class="panel compact">
+              <div class="panel-heading">
+                <h3>Tasks</h3>
+                <button id="clearTasks" type="button">Clear</button>
+              </div>
+              <ul id="taskList" class="list"></ul>
+            </section>
+
+            <section class="panel compact">
+              <div class="panel-heading">
+                <h3>Reminders</h3>
+                <button id="clearReminders" type="button">Clear</button>
+              </div>
+              <ul id="reminderList" class="list"></ul>
+            </section>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
